@@ -31,17 +31,16 @@ class NewsController extends Controller
 
         $newData = $request->all();
         $newData['thumbnail'] = $fileName;
-
+        $newData['admin_id'] = auth()->user()->id;
         $news = News::create($newData);
         return redirect('/addNews');
     }
 
     public function show($id)
     {
-        $news = News::with(['comments' => function ($query) {
+        $news = News::with(['comments.replies.user' => function ($query) {
             $query->orderBy('created_at', 'desc');
-        }], 'users')->findOrFail($id);
-
+        }], 'admin')->findOrFail($id);
         return view('news.newsDetail', [
             'news' => $news
         ]);

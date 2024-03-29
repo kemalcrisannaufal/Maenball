@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\CommentReply;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class NewsComment extends Model
 {
@@ -25,5 +26,10 @@ class NewsComment extends Model
     public function users()
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
+    }
+
+    public function replies()
+    {
+        return $this->hasMany(CommentReply::class, 'comment_id', 'id');
     }
 }

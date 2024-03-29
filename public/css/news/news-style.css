@@ -1,3 +1,8 @@
+p {
+    margin: 0;
+    padding: 0;
+}
+
 .news-title-main {
     font-weight: bold;
     font-size: 3rem;
@@ -101,4 +106,38 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+
+.comment-reply {
+    color: blue;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.reply-box {
+    display: none;
+}
+
+.comment-reply-input {
+    width: 80%;
+    font-size: 1rem;
+    color: rgb(61, 61, 62);
+    margin-bottom: 1rem;
+    padding: 5px 20px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid;
+}
+
+.see-replies {
+    color: blue;
+    cursor: pointer;
+}
+
+.replies {
+    display: none;
+    margin-left: 1rem;
+    background-color: rgba(0, 0, 0, 0.05);
+    padding: 1rem;
 }

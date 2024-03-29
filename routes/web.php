@@ -18,8 +18,9 @@ Route::get('/news', [NewsController::class, 'index']);
 Route::get('/news/{id}', [NewsController::class, 'show'])->middleware('auth:web,admin');
 Route::get('/addNews', [NewsController::class, 'create'])->middleware('auth:admin');
 Route::post('/news', [NewsController::class, 'store'])->middleware('auth:admin');
-Route::post('/news-comment/{id}', [NewsCommentController::class, 'store'])->middleware('auth:web');
 
+Route::post('/news-comment/{id}', [NewsCommentController::class, 'store'])->middleware('auth:web');
+Route::post('/news-comment/{id}/reply', [NewsCommentController::class, 'storeReply'])->middleware('auth:web');
 
 Route::get('/highlight', [VideoController::class, 'index'])->middleware('auth:web');
 Route::get('/highlight/{id}', [VideoController::class, 'show'])->middleware('auth:web');

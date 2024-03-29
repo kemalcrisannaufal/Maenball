@@ -13,10 +13,13 @@ return new class extends Migration
     {
         Schema::create('news', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('admin_id');
             $table->string('title', 100);
             $table->string('thumbnail');
             $table->text('content');
             $table->timestamps();
+
+            $table->foreign('admin_id')->references('id')->on('admins');
         });
     }
 
