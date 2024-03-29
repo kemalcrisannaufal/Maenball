@@ -1,0 +1,30 @@
+body {
+    background: linear-gradient(to left, rgba(0, 75, 117, 1), rgba(52, 61, 135, 1));
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.navbar {
+    display: flex;
+}
+
+.nav {
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 10px;
+}
