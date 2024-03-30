@@ -1,0 +1,36 @@
+.list-box {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(100px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+}
+
+.edit-box {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    margin-top: 2rem;
+}
+
+.btn-submit {
+    width: 20%;
+    background: linear-gradient(to left, rgba(0, 75, 117, 1), rgba(52, 61, 135, 1));
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+    float: right;
+}

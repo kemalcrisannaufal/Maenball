@@ -22,7 +22,7 @@
     <div class="container navbar mt-2">
         <img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo">
         <div class="nav">
-            <ul class="d-flex gap-5">
+            <ul class="d-flex gap-5" id="nav">
                 <li><a href="/">Beranda</a></li>
                 <li><a href="/news">Berita</a></li>
                 <li><a href="/">Skor</a></li>

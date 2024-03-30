@@ -17,7 +17,7 @@ class NewsController extends Controller
 
     public function create()
     {
-        return view('news.addNews');
+        return view('news.admin.addNews');
     }
 
     public function store(Request $request)
@@ -33,7 +33,7 @@ class NewsController extends Controller
         $newData['thumbnail'] = $fileName;
         $newData['admin_id'] = auth()->user()->id;
         $news = News::create($newData);
-        return redirect('/addNews');
+        return redirect('/listNews');
     }
 
     public function show($id)
@@ -45,4 +45,45 @@ class NewsController extends Controller
             'news' => $news
         ]);
     }
+
+    public function list()
+    {
+        $news = News::get();
+        return view('news.admin.listNews', [
+            'news' => $news
+        ]);
+    }
+
+    public function edit($id)
+    {
+        $news = News::findOrFail($id);
+        return view('news.admin.editNews', [
+            'news' => $news
+        ]);
+    }
+
+    public function update($id, Request $request)
+    {
+
+        $news = News::findOrFail($id);
+        $fileName = $news->thumbnail;
+        if ($request->hasFile('thumbnail')) {
+            $extension = $request->file('thumbnail')->getClientOriginalExtension();
+            $fileName = "thumbnail".'-'. now()->timestamp . '.' . $extension;
+            $request->file('thumbnail')->storeAs('thumbnails', $fileName);
+        }
+
+        $newData = $request->all();
+        $newData['thumbnail'] = $fileName;
+        $news->update($newData);
+        return redirect('/listNews');
+    }
+
+    public function destroy($id)
+    {
+        $news = News::findOrFail($id);
+        $news->delete();
+        return redirect('/listNews');
+    }
 }
+

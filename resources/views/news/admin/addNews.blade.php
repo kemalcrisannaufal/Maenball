@@ -1,10 +1,14 @@
 @extends('layouts.mainLayout')
 
+@section('title', 'Add News')
+
+@section('css', '/css/news/admin-news-style.css')
+
 @section('content')
 <div class="container mt-5">
-    <h1>Form Tambah Berita</h1>
-    <div>
-        <form action="/news" method="POST" enctype="multipart/form-data">
+    <h1 class="text-white">Form Tambah Berita</h1>
+    <div class="edit-box">
+        <form action="/news" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
@@ -19,9 +23,10 @@
                 <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
             </div>
             <div class="mb-3">
-                <button class="btn btn-success" >Submit</button>
+                <button class="btn-submit">Submit</button>
             </div>
         </form>
     </div>
+    <div class="mb-5"></div>
 </div>
 @endsection
