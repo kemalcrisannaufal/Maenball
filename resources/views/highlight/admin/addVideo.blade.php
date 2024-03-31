@@ -1,19 +1,23 @@
 @extends('layouts.mainLayout')
 
+@section('title', 'Add Video')
+
+@section('css', '/css/highlight/form-highlight-style.css')
+
 @section('content')
 
 <div class="container mt-5">
-    <h1>Form Tambah Video</h1>
-    <div>
-        <form action="/highlight" method="POST" enctype="multipart/form-data">
+    <h1 class="text-white">Form Tambah Video</h1>
+    <div class="form-box">
+        <form action="/highlight" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" name="title">
+                <input type="text" class="form-control" name="title" placeholder="Judul Video">
             </div>
             <div class="mb-3">
                 <label for="url" class="form-label">Link</label>
-                <input type="text" class="form-control" name="url">
+                <input type="text" class="form-control" name="url" placeholder="URL Video">
             </div>
             <div class="mb-3">
                 <label for="thumbnail" class="form-label">Thumbnail</label>
@@ -21,10 +25,10 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Deskripsi Video..."></textarea>
             </div>
             <div class="mb-3">
-                <button class="btn btn-success" >Submit</button>
+                <button class="btn-submit">Submit</button>
             </div>
         </form>
     </div>

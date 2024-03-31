@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,7 +27,6 @@
                 <li><a href="/">Skor</a></li>
                 <li><a href="/">Jadwal</a></li>
                 <li><a href="/highlight">Highlight</a></li>
-                <li><a href="/">Info</a></li>
                 <li><a href="/logout">Logout</a></li>
             </ul>
         </div>

@@ -123,10 +123,6 @@ hr {
 }
 
 @media (max-width: 767px) {
-    #logo {
-        display: none;
-    }
-
     .news-side-box {
         max-width: 100%;
     }

@@ -75,6 +75,7 @@ class NewsController extends Controller
 
         $newData = $request->all();
         $newData['thumbnail'] = $fileName;
+        $newData['admin_id'] = auth()->user()->id;
         $news->update($newData);
         return redirect('/listNews');
     }

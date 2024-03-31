@@ -14,7 +14,7 @@
         <div class="container mt-3">
             <div class="row">
                 <div class="col-md-8" id="latest">
-                    <h1 class="text-white fs-2">Terbaru</h1>
+                    <h1 class="text-white">Berita</h1>
                     <a href="/news/{{ $latest_news->id }}">
                         <div class="latest-news-box">
                             <img src="{{ asset('storage/thumbnails/' . $latest_news->thumbnail) }}"

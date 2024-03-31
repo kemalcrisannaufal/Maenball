@@ -28,3 +28,9 @@ li {
     color: white;
     padding: 10px;
 }
+
+@media (max-width: 767px) {
+    #logo {
+        display: none;
+    }
+}

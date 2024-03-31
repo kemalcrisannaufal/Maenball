@@ -12,7 +12,7 @@
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" name="title">
+                <input type="text" class="form-control" name="title" placeholder="Judul Berita">
             </div>
             <div class="mb-3">
                 <label for="thumbnail" class="form-label">Thumbnail</label>
@@ -20,13 +20,12 @@
             </div>
             <div class="mb-3">
                 <label for="content" class="form-label">Content</label>
-                <textarea name="content" id="content" cols="30" rows="10" class="form-control"></textarea>
+                <textarea name="content" id="content" cols="30" rows="10" class="form-control" placeholder="Isi Berita..."></textarea>
             </div>
             <div class="mb-3">
                 <button class="btn-submit">Submit</button>
             </div>
         </form>
     </div>
-    <div class="mb-5"></div>
 </div>
 @endsection
