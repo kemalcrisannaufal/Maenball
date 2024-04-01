@@ -33,7 +33,7 @@ class NewsController extends Controller
         $newData['thumbnail'] = $fileName;
         $newData['admin_id'] = auth()->user()->id;
         $news = News::create($newData);
-        return redirect('/listNews');
+        return redirect('/admin/list-news');
     }
 
     public function show($id)
@@ -77,14 +77,14 @@ class NewsController extends Controller
         $newData['thumbnail'] = $fileName;
         $newData['admin_id'] = auth()->user()->id;
         $news->update($newData);
-        return redirect('/listNews');
+        return redirect('/admin/list-news');
     }
 
     public function destroy($id)
     {
         $news = News::findOrFail($id);
         $news->delete();
-        return redirect('/listNews');
+        return redirect('/admin/list-news');
     }
 }
 

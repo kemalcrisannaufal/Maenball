@@ -8,7 +8,7 @@
 <div class="container mt-5">
     <h1 class="text-white">Form Tambah Berita</h1>
     <div class="edit-box">
-        <form action="/news" method="POST" enctype="multipart/form-data" class="w-100">
+        <form action="/admin/news" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>

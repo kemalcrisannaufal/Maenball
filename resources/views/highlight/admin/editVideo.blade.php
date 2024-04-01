@@ -8,7 +8,7 @@
 <div class="container mt-5">
     <h1 class="text-white">Edit Highlight</h1>
     <div class="form-box mt-5">
-        <form action="/highlight/edit/{{ $video->id }}" method="POST" enctype="multipart/form-data" class="w-100">
+        <form action="/admin/highlight/edit/{{ $video->id }}" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf
             @method('PUT')
             <div class="mb-3">

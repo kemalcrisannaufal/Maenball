@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Video;
+use App\Models\LikedVideo;
 use Illuminate\Http\Request;
 
 class VideoController extends Controller
@@ -10,6 +11,7 @@ class VideoController extends Controller
     public function index()
     {
         $videos = Video::get();
+
         return view('highlight.video', [
             'videos' => $videos
         ]);
@@ -33,7 +35,7 @@ class VideoController extends Controller
         $newData['thumbnail'] = $fileName;
         $newData['admin_id'] = auth()->user()->id;
         $video = Video::create($newData);
-        return redirect('/list-highlight');
+        return redirect('/admin/list-highlight');
     }
 
     public function show($id)
@@ -76,13 +78,40 @@ class VideoController extends Controller
         $newData['thumbnail'] = $fileName;
         $newData['admin_id'] = auth()->user()->id;
         $video->update($newData);
-        return redirect('/list-highlight');
+        return redirect('/admin/list-highlight');
     }
 
     public function destroy($id)
     {
         $video = Video::findOrFail($id);
         $video->delete();
-        return redirect('/list-highlight');
+        return redirect('/admin/list-highlight');
     }
+
+    public function like($id)
+    {
+
+        $user_id = auth()->user()->id;
+        $exists = LikedVideo::where('user_id', $user_id)->where('video_id', $id)->exists();
+        if ($exists) {
+            LikedVideo::where('user_id', $user_id)->where('video_id', $id)->delete();
+            return response()->json(['success' => true, 'message' => 'Video unliked successfully']);
+        } else {
+            $likedVideo = new LikedVideo();
+            $likedVideo->video_id = $id;
+            $likedVideo->user_id = $user_id;
+            $likedVideo->save();
+            return response()->json(['success' => true, 'message' => 'Video liked successfully']);
+        }
+    }
+
+    public function likedVideos()
+    {
+        $user_id = auth()->user()->id;
+        $liked_videos = LikedVideo::where('user_id', $user_id)->get();
+        return view('highlight.likedVideos', [
+            'liked_videos' => $liked_videos
+        ]);
+    }
+
 }

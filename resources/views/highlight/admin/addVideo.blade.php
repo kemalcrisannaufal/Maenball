@@ -9,7 +9,7 @@
 <div class="container mt-5">
     <h1 class="text-white">Form Tambah Video</h1>
     <div class="form-box">
-        <form action="/highlight" method="POST" enctype="multipart/form-data" class="w-100">
+        <form action="/admin/highlight" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
