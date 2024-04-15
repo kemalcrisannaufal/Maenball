@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\NewsCommentController;
 
@@ -12,6 +13,10 @@ Route::get('/', [HomeController::class, 'index']);
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'loginProcess'])->middleware('guest');
 Route::get('/logout', [AuthController::class, 'logout'])->middleware('auth:web,admin');
+
+Route::get('/profile', [UserController::class, 'index'])->middleware('auth:web');
+Route::get('/profile/edit/{id}', [UserController::class, 'edit'])->middleware('auth:web');
+Route::patch('/profile/edit/{id}', [UserController::class, 'update'])->middleware('auth:web');
 
 Route::get('/news', [NewsController::class, 'index'])->middleware('auth:web');
 Route::get('/news/{id}', [NewsController::class, 'show'])->middleware('auth:web');

@@ -18,6 +18,12 @@
     <link rel="stylesheet" href='/css/style.css'>
     <link rel="stylesheet" href=@yield('css')>
     <title>@yield('title')</title>
+    <script>
+        document.getElementById('hamburger-icon').addEventListener('click', function() {
+            var nav = document.getElementById('nav');
+            nav.classList.toggle('active');
+        });
+    </script>
 </head>
 
 <body>
@@ -25,14 +31,47 @@
         <div class="container-fluid navbar">
             <img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo">
             <div class="nav">
-                <ul class="d-flex gap-5" id="nav">
+                <ul class="d-flex gap-5 align-items-center" id="nav">
                     <li><a href="/">Beranda</a></li>
                     <li><a href="/news">Berita</a></li>
                     <li><a href="/">Skor</a></li>
                     <li><a href="/">Jadwal</a></li>
                     <li><a href="/highlight">Highlight</a></li>
-                    <li><a href="/logout">Logout</a></li>
+                    <li class="dropdown" id="profile">
+                        <div class="profile">
+                            @if (auth()->user()->profile_picture == null)
+                                <a href="javascript:void(0)"><img
+                                        src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt=""
+                                        width="50" height="50"></a>
+                            @else
+                                <a href="javascript:void(0)"><img
+                                        src="{{ asset('storage/profile/' . auth()->user()->profile_picture) }}"
+                                        alt="" width="50" height="50"></a>
+                            @endif
+                        </div>
+                        <div class="dropdown-content">
+                            <a href="/profile">Profile</a>
+                            <a href="/logout">Logout</a>
+                        </div>
+                    </li>
                 </ul>
+                <div class="dropdown mt-3" id="profile-mobile">
+                    <div class="profile">
+                        @if (auth()->user()->profile_picture == null)
+                            <a href="javascript:void(0)"><img
+                                    src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt=""
+                                    width="50" height="50"></a>
+                        @else
+                            <a href="javascript:void(0)"><img
+                                    src="{{ asset('storage/profile/' . auth()->user()->profile_picture) }}"
+                                    alt="" width="50" height="50"></a>
+                        @endif
+                    </div>
+                    <div class="dropdown-content">
+                        <a href="/profile">Profile</a>
+                        <a href="/logout">Logout</a>
+                    </div>
+                </div>
             </div>
         </div>
 
