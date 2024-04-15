@@ -6,8 +6,8 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="text-white">Edit Highlight</h1>
-    <div class="form-box mt-5">
+    <h1>Edit Highlight</h1>
+    <div class="form-box mt-3">
         <form action="/admin/highlight/edit/{{ $video->id }}" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf
             @method('PUT')
@@ -25,7 +25,7 @@
             </div>
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
-                <textarea name="description" id="description" cols="30" rows="10" class="form-control" placeholder="Deskripsi Video...">{{ $video->description }}</textarea>
+                <textarea name="description" id="description" cols="30" rows="7" class="form-control" placeholder="Deskripsi Video...">{{ $video->description }}</textarea>
             </div>
             <div class="mb-3">
                 <button class="btn-submit">Submit</button>

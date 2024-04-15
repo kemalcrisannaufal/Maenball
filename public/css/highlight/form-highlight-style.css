@@ -10,6 +10,7 @@
     border-radius: 5px;
     margin-top: 2rem;
     margin-bottom: 3rem;
+    box-shadow: 5px 5px 4px 4px rgb(199, 199, 199);
 }
 
 .btn-submit {
