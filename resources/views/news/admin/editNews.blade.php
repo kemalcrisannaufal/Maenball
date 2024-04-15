@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="container mt-5">
-    <h1 class="text-white">Edit Berita</h1>
+    <h1>Edit Berita</h1>
     <div class="edit-box mt-5">
         <form action="/admin/news/edit/{{ $news->id }}" method="POST" enctype="multipart/form-data" class="w-100">
             @csrf

@@ -6,11 +6,11 @@
 
 @section('content')
     <div class="container mt-5">
-        <h1 class="text-white">Daftar Berita</h1>
+        <h1>Daftar Berita</h1>
         <div class="d-flex mt-3">
             <button class="btn-add"><a href="/admin/add-news">Tambah Berita</a></button>
         </div>
-        <div class="table-responsive mt-2 list-box">
+        <div class="table-responsive mt-2 list-box shadow">
             @if ($news->count() == 0)
                 <div class="p-2" style="background-color: rgb(2, 60, 94);">
                     <h5 class="text-white text-center m-0">Tidak ada berita</h5>

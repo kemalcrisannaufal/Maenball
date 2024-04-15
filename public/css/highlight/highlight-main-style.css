@@ -8,7 +8,6 @@ iframe {
     width: 100%;
     height: 600px;
     margin-top: 1rem;
-    border: solid 4px white;
     overflow: hidden;
     border-radius: 5px;
 }
@@ -17,10 +16,11 @@ iframe {
     width: 420px;
     height: 200px;
     margin-top: 1rem;
-    border: solid 4px white;
+    border: solid 4px;
     overflow: hidden;
     border-radius: 5px;
     position: relative;
+    box-shadow: 10px 10px 5px grey;
 }
 
 .side-thumbnail {
@@ -32,21 +32,24 @@ iframe {
 hr {
     margin-top: 2rem;
     margin-bottom: 1rem;
-    border: 1px solid white;
+    border: 1px solid;
 }
 
 .main-video-description {
-    background-color: rgb(2, 60, 94);
     backdrop-filter: blur(10px);
-    color: white;
     width: 100%;
     height: 120px;
     margin-top: 1rem;
-    border: solid 4px white;
+    border: solid 1px;
     overflow: hidden;
     padding-top: 10px;
     padding-inline: 20px;
     border-radius: 5px;
+    background: linear-gradient(
+        to left,
+        rgb(209, 209, 209),
+        rgba(230, 230, 230, 1)
+    );
 }
 
 a {
@@ -55,9 +58,7 @@ a {
 
 .main-video-container {
     padding: 10px;
-    background-color: rgb(2, 60, 94);
-    color: white;
-    border-radius: 5px;
+    border: 1px solid black;
 }
 
 .highlight-grid {
@@ -71,25 +72,13 @@ i {
     padding: 0;
 }
 
-.btn-like {
-    border-radius: 5px;
-    font-weight: bold;
-    width: 100%;
-    cursor: pointer;
-    float: right;
-    padding: 10px;
-    border: solid 2px white;
-    background: linear-gradient(to left, rgba(0, 75, 117, 1), rgba(52, 61, 135, 1));
-    color: white;
-}
-
 .highlight-title {
     padding: 10px;
     font-size: 18px;
     width: 100%;
     position: absolute;
     font-weight: bold;
-    top: 85%;
+    top: 88%;
     left: 50%;
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
@@ -118,14 +107,26 @@ i {
     color: red;
 }
 
+.btn-like {
+    border-radius: 5px;
+    font-weight: bold;
+    width: 100%;
+    cursor: pointer;
+    float: right;
+    padding: 10px;
+    border: solid 1px;
+    background-color: rgba(52, 61, 135, 1);
+    color: white;
+}
+
 .btn-liked-videos {
     border: none;
-    color: white;
     font-weight: bold;
     cursor: pointer;
     border-radius: 5px;
-    background: linear-gradient(to left, rgba(0, 75, 117, 1), rgba(52, 61, 135, 1));
-    border: solid 2px white;
+    border: solid 1px;
+    color: white;
+    background-color: rgba(52, 61, 135, 1);
 }
 
 a {

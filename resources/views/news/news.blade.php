@@ -11,10 +11,10 @@
             $news = $list_news->slice(4);
         @endphp
 
-        <div class="container mt-3">
+        <div class="container mt-5">
             <div class="row">
                 <div class="col-md-8" id="latest">
-                    <h1 class="text-white">Berita</h1>
+                    <h1>Berita</h1>
                     <a href="/news/{{ $latest_news->id }}">
                         <div class="latest-news-box">
                             <img src="{{ asset('storage/thumbnails/' . $latest_news->thumbnail) }}"
@@ -25,7 +25,7 @@
                 </div>
                 @if (count($side_news) > 0)
                 <div class="col-md-4">
-                    <h1 class="text-white fs-2">Paling Baru</h1>
+                    <h1 class="fs-2">Paling Baru</h1>
                     <div class="vertical-news-box">
                         @foreach ($side_news as $value)
                             <a href="/news/{{ $value->id }}">

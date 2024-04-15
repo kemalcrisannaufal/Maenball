@@ -6,7 +6,7 @@
 @section('js', '/js/comment.js')
 
 @section('content')
-    <div class="container mt-5 col-lg-7 col-md-7 col-sm-12 bg-light p-5">
+    <div class="container mt-5 col-lg-7 col-md-7 col-sm-12 bg-light p-5 shadow">
         <div id="news">
             <h1 class="news-title-main">{{ $news->title }}</h1>
             <p class="news-date-main">{{$news->admin->name.' - '.$news->created_at }}</p>

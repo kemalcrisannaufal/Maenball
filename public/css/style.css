@@ -1,8 +1,19 @@
+html,
 body {
-    background: linear-gradient(to left, rgba(0, 75, 117, 1), rgba(52, 61, 135, 1));
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-color: #f3f4f7;
 }
 
-ul {
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 93vh;
+}
+
+
+p, ul {
     margin: 0;
     padding: 0;
 }
@@ -17,16 +28,41 @@ li {
 }
 
 .navbar {
+    padding-inline: 2rem;
     display: flex;
+    background: linear-gradient(
+        to left,
+        rgba(0, 75, 117, 1),
+        rgba(52, 61, 135, 1)
+    );
 }
 
 .nav {
-    border: 2px solid white;
+    /* border: 2px solid white; */
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     padding: 10px;
+}
+
+#logo {
+    height: 60px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    background: linear-gradient(
+        to left,
+        rgba(0, 75, 117, 1),
+        rgba(52, 61, 135, 1)
+    );
+    min-height: 7vh;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
 }
 
 @media (max-width: 767px) {

@@ -21,21 +21,29 @@
 </head>
 
 <body>
-    <div class="container navbar mt-2">
-        <img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo">
-        <div class="nav">
-            <ul class="d-flex gap-5" id="nav">
-                <li><a href="/">Beranda</a></li>
-                <li><a href="/news">Berita</a></li>
-                <li><a href="/">Skor</a></li>
-                <li><a href="/">Jadwal</a></li>
-                <li><a href="/highlight">Highlight</a></li>
-                <li><a href="/logout">Logout</a></li>
-            </ul>
+    <div class="page-container">
+        <div class="container-fluid navbar">
+            <img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo">
+            <div class="nav">
+                <ul class="d-flex gap-5" id="nav">
+                    <li><a href="/">Beranda</a></li>
+                    <li><a href="/news">Berita</a></li>
+                    <li><a href="/">Skor</a></li>
+                    <li><a href="/">Jadwal</a></li>
+                    <li><a href="/highlight">Highlight</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </div>
         </div>
+
+        @yield('content')
     </div>
 
-    @yield('content')
+
+    <div class="footer">
+        <p>Made By Group D</p>
+        <p>Copyright &copy; 2024. All Rights Reserved.</p>
+    </div>
 
 </body>
 

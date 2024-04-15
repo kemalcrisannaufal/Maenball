@@ -42,8 +42,8 @@
 @endsection
 
 @section('content')
-    <div class="container mt-3 mb-5">
-        <h1 class="text-white fs-2">Highlight</h1>
+    <div class="container mt-5 mb-5">
+        <h1 class="mb-3">Highlight</h1>
 
         <div class="row">
             <div class="col-md-12">
@@ -79,8 +79,8 @@
 
 
         </div>
-        <hr>
-        <h1 class="fs-2 text-white">Highlight Lainnya</h1>
+
+        <h1 class="fs-2 mt-3">Highlight Lainnya</h1>
 
         <div class="highlight-grid">
             @foreach ($videos as $video)
