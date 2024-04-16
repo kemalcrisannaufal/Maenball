@@ -43,7 +43,7 @@
             <hr>
             @if (count($news) > 0)
             <div class="row">
-                <h1 class="text-white fs-2">Berita Lainnya</h1>
+                <h1 class="fs-2">Berita Lainnya</h1>
                 <div class="horizontal-news-box">
                     @foreach ($news as $value)
                         <a href="/news/{{ $value->id }}">

@@ -20,8 +20,13 @@
                 <form action="/news-comment/{{ $news->id }}" method="POST" style="width: 100%"
                     class="d-flex justify-content-center">
                     <div class="profile-picture-comment">
-                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                            class="profile-image-comment">
+                        @if (auth()->user()->profile_picture == null)
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                class="profile-image-comment">
+                        @else
+                            <img src="{{ asset('storage/profile/' . auth()->user()->profile_picture) }}" alt=""
+                                class="profile-image-comment">
+                        @endif
                     </div>
                     <input type="text" class="comment-input" placeholder="Tulis Komentar..." name="comment">
                     @csrf
@@ -34,8 +39,13 @@
             @foreach ($news->comments as $comment)
                 <div class="comment">
                     <div class="profile-picture-comment">
-                        <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
-                            class="profile-image-comment">
+                        @if ($comment->users->profile_picture == null)
+                            <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
+                                class="profile-image-comment">
+                        @else
+                            <img src="{{ asset('storage/profile/' . $comment->users->profile_picture) }}" alt=""
+                                class="profile-image-comment">
+                        @endif
                     </div>
                     <div class="comment-content-box">
                         <p class="comment-name">{{ $comment->users->name }}</p>

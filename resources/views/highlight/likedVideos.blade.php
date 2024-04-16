@@ -2,21 +2,18 @@
 
 @section('title', 'Liked Videos')
 
-@section('css', '/css/highlight/highlight-main-style.css')
+@section('css', '/css/highlight/liked-video-style.css')
 
 @section('content')
-    <div class="container mt-3">
+    <div class="container mt-5">
+        <h1 class="mb-2 fs-2">Video Yang Anda Sukai</h1>
         <div class="d-flex gap-3">
             @foreach ($liked_videos as $video)
-                <div class="card mb-3 col-md-4">
-                    <img class="card-img-top" src="{{ asset('storage/videos/thumbnails/' . $video->video->thumbnail) }}"
-                        alt="{{ $video->video->title }}">
-                    <div class="card-body">
-                        <h5 class="card-title">{{ $video->video->title }}</h5>
-                    </div>
-                    <a href="/highlight/{{ $video->video->id }}"><button>Lihat Video</button></a>
-
+            <a href="/highlight/{{ $video->video->id }}">
+                <div class="video-box">
+                    <img src="{{ asset('storage/videos/thumbnails/' . $video->video->thumbnail) }}" alt="" class="video-thumbnail">
                 </div>
+            </a>
             @endforeach
         </div>
     </div>

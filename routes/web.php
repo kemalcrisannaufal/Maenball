@@ -8,7 +8,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\NewsCommentController;
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/dashboard', [HomeController::class, 'index']);
 
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'loginProcess'])->middleware('guest');

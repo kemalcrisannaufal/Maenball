@@ -106,15 +106,6 @@ li {
     overflow: hidden;
 }
 
-.hamburger {
-    display: none;
-    font-size: 24px;
-    background: none;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-}
-
 #profile-mobile {
     display: none;
 }
@@ -129,10 +120,6 @@ li {
     }
 
     #profile-mobile {
-        display: block;
-    }
-
-    .hamburger {
         display: block;
     }
 

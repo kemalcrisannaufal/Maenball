@@ -1,11 +1,22 @@
-.img-box {
+.img-news-homepage {
     width: 100%;
-    height: 100%;
+    height: 85%;
     overflow: hidden;
     border-radius: 10px;
+    position: relative;
 }
 
 .img-news {
     object-fit: cover;
     width: 100%;
+}
+
+.news-title-homepage {
+    position: absolute;
+    top: 65%;
+    left: 40%;
+    color: white;
+    width: 50%;
+    padding: 20px;
+    font-size: 28px;
 }

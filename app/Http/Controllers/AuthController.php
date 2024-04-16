@@ -27,7 +27,7 @@ class AuthController extends Controller
 
         if (Auth::guard('web')->attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect('/');
+            return redirect('/dashboard');
         }
 
         Session::flash('status', 'failed');
