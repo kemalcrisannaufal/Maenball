@@ -51,6 +51,7 @@
                         </div>
                         <div class="dropdown-content">
                             <a href="/profile">Profile</a>
+                            <a href="/liked-videos">Liked Video</a>
                             <a href="/logout">Logout</a>
                         </div>
                     </li>

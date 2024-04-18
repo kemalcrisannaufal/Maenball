@@ -106,6 +106,10 @@ li {
     overflow: hidden;
 }
 
+.dropdown-content a:hover {
+    background-color: rgb(77, 87, 162);
+}
+
 #profile-mobile {
     display: none;
 }

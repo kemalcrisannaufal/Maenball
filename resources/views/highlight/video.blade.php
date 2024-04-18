@@ -43,40 +43,20 @@
 @endsection
 
 @section('content')
+    <img src="images/videonav.png" alt="">
     <div class="container mt-5 mb-5">
-        <h1 class="mb-3">Highlight</h1>
+        <h1 class="mb-3 fs-3">Highlight</h1>
         <div class="row">
             <div class="col-md-12">
-                <div class="main-video-container">
-                    <div class="main-video-box">
-                        <iframe src="{{ $latest_video->url }}" title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="main-video"></iframe>
-                    </div>
-                    <div class="main-video-description">
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h1>{{ $latest_video->title }}</h1>
-                            <div class="d-flex gap-3">
-                                <form action="/highlight/like/{{ $latest_video->id }}" method="POST">
-                                    @php
-                                        $isLiked = \App\Models\LikedVideo::where('user_id', auth()->id())
-                                            ->where('video_id', $latest_video->id)
-                                            ->exists();
-                                    @endphp
-                                    <button class="btn-like" data-video-id="{{ $latest_video->id }}"
-                                        data-url="{{ route('video.like', ['id' => $latest_video->id]) }}" type="button">
-                                        <i class="fas fa-heart {{ $isLiked ? 'icon-love-liked' : 'icon-love' }}"></i> Suka</button>
-                                </form>
-                                <button class="btn-liked-videos"><a href="/liked-videos">Liked Videos</a></button>
-                            </div>
-                        </div>
-                        <p>{{ $latest_video->description }}</p>
-                    </div>
-
+                <div>
+                    <a href="/highlight/{{ $latest_video->id }}">
+                        <img src="{{ asset('storage/videos/thumbnails/' . $latest_video->thumbnail) }}" alt=""
+                            class="w-100">
+                    </a>
                 </div>
             </div>
         </div>
-        <h1 class="fs-2 mt-3">Highlight Lainnya</h1>
+        <h1 class="fs-3 mt-5">Highlight Lainnya</h1>
         <div class="highlight-grid">
             @foreach ($videos as $video)
                 <a href="/highlight/{{ $video->id }}" class="highlight" data-highlight-id="{{ $video->id }}">

@@ -1,5 +1,7 @@
 @extends('layouts.mainLayout')
 
+@section('title', 'Dashboard')
+
 @section('css', '/css/home/home-style.css')
 
 @section('content')

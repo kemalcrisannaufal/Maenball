@@ -27,7 +27,7 @@ class VideoController extends Controller
         $fileName = '';
         if ($request->hasFile('thumbnail')) {
             $extension = $request->file('thumbnail')->getClientOriginalExtension();
-            $fileName = $request->title.'-'. now()->timestamp . '.' . $extension;
+            $fileName = 'thumbnail-'. now()->timestamp . '.' . $extension;
             $request->file('thumbnail')->storeAs('videos/thumbnails', $fileName);
         }
 

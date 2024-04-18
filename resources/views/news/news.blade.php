@@ -1,5 +1,7 @@
 @extends('layouts.mainLayout')
 
+@section('title', 'Berita')
+
 @section('css', '/css/news/news-main-style.css')
 
 @section('content')
