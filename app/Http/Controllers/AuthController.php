@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
@@ -41,5 +42,24 @@ class AuthController extends Controller
         $request->session()->invalidate();
         $request->session()->regenerateToken();
         return redirect('/login');
+    }
+
+    public function register()
+    {
+        return view('auth.register');
+    }
+
+    public function registerProcess(Request $request)
+    {
+        if ($request->password === $request->confirm_password) {
+            $newData = $request->all();
+            $newData['password'] = bcrypt($request->password);
+            $user = User::create($newData);
+            return redirect('/login');
+        } else {
+            Session::flash('status', 'failed');
+            Session::flash('message', 'Password Tidak Sama');
+            return redirect('/register');
+        }
     }
 }

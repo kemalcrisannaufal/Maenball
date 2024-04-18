@@ -76,8 +76,13 @@
                                     <p class="comment-content">{{ $reply->reply }}</p>
                                 </div>
                                 <div class="profile-picture-comment">
+                                    @if ($reply->user->profile_picture == null)
                                     <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png"
                                         class="profile-image-comment">
+                                    @else
+                                    <img src="{{ asset('storage/profile/' . $reply->user->profile_picture) }}" alt=""
+                                        class="profile-image-comment">
+                                    @endif
                                 </div>
                             </div>
                         @endforeach

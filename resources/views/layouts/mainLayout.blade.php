@@ -29,7 +29,7 @@
 <body>
     <div class="page-container">
         <div class="container-fluid navbar">
-            <img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo">
+            <a href="/dashboard"><img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo"></a>
             <div class="nav">
                 <ul class="d-flex gap-5 align-items-center" id="nav">
                     <li><a href="/dashboard">Beranda</a></li>

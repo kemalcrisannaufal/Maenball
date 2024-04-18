@@ -8,7 +8,15 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\NewsCommentController;
 
-Route::get('/dashboard', [HomeController::class, 'index']);
+Route::get('/', function () {
+    return redirect('/login');
+    // return view('auth.login');
+});
+
+Route::get('/dashboard', [HomeController::class, 'index'])->middleware('auth:web');
+
+Route::get('/register', [AuthController::class, 'register'])->middleware('guest');
+Route::post('/register', [AuthController::class, 'registerProcess'])->middleware('guest');
 
 Route::get('/login', [AuthController::class, 'login'])->name('login')->middleware('guest');
 Route::post('/login', [AuthController::class, 'loginProcess'])->middleware('guest');
