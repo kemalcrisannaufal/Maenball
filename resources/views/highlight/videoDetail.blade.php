@@ -49,8 +49,8 @@
     @endphp
     <div class="container mt-5 mb-3">
         <div class="row">
-            <h1 class="fs-2 mb-3">Highlight Bola</h1>
             <div class="col-lg-9 col-md-9 col-sm-12">
+                <h1 class="fs-2 mb-3">Highlight</h1>
                 <div>
                     <iframe src="{{ $video->url }}" title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -77,6 +77,7 @@
                 </div>
             </div>
             <div class="col-lg-3 col-md-3 col-sm-12">
+                <h1 class="fs-2 mb-3">Konten lainnya</h1>
                 @foreach ($side_video as $video)
                     <a href="/highlight/{{ $video->id }}">
                         <div class="side-video mb-4">
