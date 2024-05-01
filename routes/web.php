@@ -6,6 +6,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\NewsCommentController;
 
 Route::get('/', function () {
@@ -36,6 +37,8 @@ Route::get('/highlight', [VideoController::class, 'index'])->middleware('auth:we
 Route::get('/highlight/{id}', [VideoController::class, 'show'])->middleware('auth:web,admin');
 Route::post('/highlight/like/{id}', [VideoController::class, 'like'])->name('video.like')->middleware('auth:web');
 Route::get('/liked-videos', [VideoController::class, 'likedVideos'])->middleware('auth:web');
+
+Route::get('/schedule', [ScheduleController::class, 'index'])->middleware('auth:web');
 
 
 Route::prefix('admin')->group(function () {

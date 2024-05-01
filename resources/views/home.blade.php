@@ -88,7 +88,7 @@
                     <div class="first-schedule-box">
                         <div class="d-flex justify-content-between align-items-center gap-5 w-100">
                             <div class="d-flex justify-content-center align-items-center gap-2">
-                                <img src="/images/madrid.png" alt="">
+                                <img src="/images/madrid.png" alt=""  width="40">
                                 <p>Real Madrid</p>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center gap-0">
@@ -97,7 +97,7 @@
                                 <p class="mb-0">|</p>
                             </div>
                             <div class="d-flex justify-content-center align-items-center gap-2">
-                                <img src="/images/barca.png" alt="">
+                                <img src="/images/barca.png" alt="" width="40">
                                 <p>Barcelona</p>
                             </div>
                             <div class="d-flex justify-content-center align-items-center gap-3">
@@ -118,7 +118,7 @@
                         <div class="schedule-box">
                             <div class="d-flex justify-content-between align-items-center gap-5 w-100">
                                 <div class="d-flex justify-content-center align-items-center gap-2">
-                                    <img src="/images/madrid.png" alt="">
+                                    <img src="/images/madrid.png" alt="" width="40">
                                     <p>Real Madrid</p>
                                 </div>
                                 <div class="d-flex flex-column justify-content-center align-items-center gap-0">
@@ -127,7 +127,7 @@
                                     <p class="mb-0">|</p>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center gap-2">
-                                    <img src="/images/barca.png" alt="">
+                                    <img src="/images/barca.png" alt="" width="40">
                                     <p>Barcelona</p>
                                 </div>
                                 <div class="d-flex justify-content-center align-items-center gap-3">
