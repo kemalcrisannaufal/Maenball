@@ -11,7 +11,7 @@
                 <div class="img-box">
                     <img src="images/schedule.png" alt="" class="img">
                     <div class="newest-schedule-match">
-                        <p class="fw-bold fs-2 text-white mb-3">Pertandingan Mendatang</p>
+                        <p class="fw-bold fs-2 text-white mb-3" id="title">Pertandingan Mendatang</p>
                         <div class="d-flex justify-content-start align-items-center gap-5">
                             <img src="images/barca.png" alt="" class="img-club">
                             <p class="fw-bold fs-2 text-white">VS</p>
@@ -29,11 +29,13 @@
                         </div>
                         <div class="d-flex align-items-center gap-3 mt-3">
                             <i class="fas fa-map-marker-alt"></i>
-                            <p >Camp Nou</p>
+                            <p>Camp Nou</p>
                         </div>
-                        <div class="newest-schedule-clubname">
-                            <p class="fw-bold fs-4 mb-3">Barcelona</p>
-                            <p class="fw-bold fs-4">&nbsp;&nbsp;&nbsp;&nbsp;Real Madrid</p>
+                        <div id="newest-schedule-club">
+                            <div class="newest-schedule-clubname">
+                                <p class="fw-bold fs-4 mb-3">Barcelona</p>
+                                <p class="fw-bold fs-4">&nbsp;&nbsp;&nbsp;&nbsp;Real Madrid</p>
+                            </div>
                         </div>
                     </div>
 

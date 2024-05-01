@@ -27,7 +27,7 @@
 
 .img-box {
     width: 100%;
-    height: 350px;
+    height: 330px;
     overflow: hidden;
     position: relative;
     border-radius: 10px;
@@ -57,4 +57,89 @@
     left: 140%;
     color: white;
     top: 60%;
+}
+
+@media (max-width: 1400px) {
+    .img-box {
+        display: flex;
+        align-items: center;
+        background: rgba(0, 75, 117, 1);
+    }
+
+    #newest-schedule-club {
+        display: none;
+    }
+
+    .img {
+        position: absolute;
+        top: 15%;
+    }
+
+    .newest-schedule-match {
+        top: 15%;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .img-box {
+        display: flex;
+        align-items: center;
+        background: rgba(0, 75, 117, 1);
+    }
+
+    #newest-schedule-club {
+        display: none;
+    }
+
+    .img {
+        position: absolute;
+        top: 25%;
+    }
+
+    .newest-schedule-match {
+        top: 15%;
+    }
+}
+
+@media (max-width: 991px) {
+    .img-box {
+        display: flex;
+        align-items: center;
+        background: rgba(0, 75, 117, 1);
+    }
+
+    #newest-schedule-club {
+        display: none;
+    }
+
+    .img {
+        position: absolute;
+        top: 23%;
+    }
+
+    .newest-schedule-match {
+        top: 15%;
+    }
+}
+
+@media (max-width: 767px) {
+    .img-box {
+        display: flex;
+        align-items: center;
+        background: rgba(0, 75, 117, 1);
+    }
+
+    #newest-schedule-club {
+        display: none;
+    }
+
+    .img {
+        position: absolute;
+        top: 23%;
+    }
+
+    .newest-schedule-match {
+        top: 18%;
+    }
 }
