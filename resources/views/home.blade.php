@@ -68,13 +68,17 @@
                             </table>
                         </div>
                     @endfor
+                    <p class="fw-semibold fs-5">UEFA Champions League</p>
                 </div>
             </div>
             <div class="col-md-8 col-lg-8 col-sm-12" id="right-side">
-                <div class="news-homepage">
-                    <img src="{{ '/storage/thumbnails/' . $latest_news->first()->thumbnail }}"
-                        alt="{{ $latest_news->first()->title }}" class="img-news">
-                </div>
+                <p class="fw-bold fs-2 mb-3">Berita Terkini</p>
+                <a href="/news/{{ $latest_news->first()->id }}">
+                    <div class="news-homepage">
+                        <img src="{{ '/storage/thumbnails/' . $latest_news->first()->thumbnail }}"
+                            alt="{{ $latest_news->first()->title }}" class="img-news">
+                    </div>
+                </a>
                 <h4 class="news-title-homepage">{{ $latest_news->first()->title }}</h4>
                 <div class="schedule-section">
                     <div class="d-flex justify-content-between mb-3">
