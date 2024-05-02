@@ -5,6 +5,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ScoreController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\ScheduleController;
 use App\Http\Controllers\NewsCommentController;
@@ -40,6 +41,7 @@ Route::get('/liked-videos', [VideoController::class, 'likedVideos'])->middleware
 
 Route::get('/schedule', [ScheduleController::class, 'index'])->middleware('auth:web');
 
+Route::get('/score', [ScoreController::class, 'index'])->middleware('auth:web');
 
 Route::prefix('admin')->group(function () {
     Route::get('/dashboard', function () {
