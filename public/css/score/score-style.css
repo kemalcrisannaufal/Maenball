@@ -6,12 +6,14 @@ body {
     width: 100%;
     height: 250px;
     position: relative;
+    display: flex;
     justify-content: center;
     align-items: center;
     overflow: hidden;
 }
 
 .img {
+    width: 100%;
     object-fit: cover;
 }
 
@@ -31,14 +33,14 @@ body {
 
 .date-main-info {
     position: absolute;
-    top: 7%;
-    left:22%;
+    top: 4%;
+    left:20%;
 }
 
 .additional-main-info {
     position: absolute;
     left: 20%;
-    top: 90%;
+    top: 87%;
 }
 
 .score-main-box {
@@ -55,3 +57,128 @@ body {
     justify-content: center;
     gap: 1rem;
 }
+
+
+@media (max-width: 1400px) {
+    .img-box {
+        background-color: rgba(52, 61, 135, 1);
+        border-radius: 10px;
+    }
+
+    .date-main-info, .additional-main-info {
+        color: white;
+    }
+
+    .date-main-info {
+        left: 30%;
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    #main-score {
+        left: 22%;
+    }
+
+    .additional-main-info {
+        min-width: 400px;
+        max-width: 400px;
+        left: 30%;
+    }
+    #img {
+        display: none;
+    }
+
+}
+
+@media (max-width: 1200px) {
+    .img-box {
+        background-color: rgba(52, 61, 135, 1);
+        border-radius: 10px;
+    }
+
+    .date-main-info, .additional-main-info {
+        color: white;
+    }
+
+    .date-main-info {
+        left: 25%;
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    #main-score {
+        left: 15%;
+    }
+
+    .additional-main-info {
+        min-width: 400px;
+        max-width: 400px;
+        left: 25%;
+    }
+    #img {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+
+    .img-box {
+        background-color: rgba(52, 61, 135, 1);
+        border-radius: 10px;
+    }
+
+    .date-main-info, .additional-main-info {
+        color: white;
+    }
+
+    .date-main-info {
+        left: 10%;
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    #main-score {
+        left: 2%;
+    }
+
+    .additional-main-info {
+        min-width: 400px;
+        max-width: 400px;
+        left: 10%;
+    }
+    #img {
+        display: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .img-box {
+        background-color: rgba(52, 61, 135, 1);
+        border-radius: 10px;
+    }
+
+    .date-main-info, .additional-main-info {
+        color: white;
+    }
+
+    .date-main-info {
+        left: 10%;
+        min-width: 400px;
+        max-width: 400px;
+    }
+
+    #main-score {
+        left: 2%;
+    }
+
+    .additional-main-info {
+        min-width: 400px;
+        max-width: 400px;
+        left: 10%;
+    }
+    #img {
+        display: none;
+    }
+}
+
+

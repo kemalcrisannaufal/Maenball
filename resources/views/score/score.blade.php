@@ -9,7 +9,9 @@
         <div class="row d-flex justify-content-center">
             <div class="col-md-10">
                 <div class="img-box">
-                    <img src="images/score.png" alt="" class="img">
+                    <div id="img">
+                        <img src="images/score.png" alt="" class="img">
+                    </div>
                     <div class="d-flex justify-content-center align-items-center gap-5 text-white" id="main-score">
                         <div class="d-flex flex-column align-items-center justify-content-center">
                             <img src="/images/madrid.png" alt="" width="70">
@@ -63,7 +65,7 @@
                                             <p class="fw-bold fs-5">Real Madrid</p>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-between mt-2 p-2">
+                                    <div class="d-flex justify-content-between mt-2 p-2 gap-2">
                                         <div class="d-flex gap-3 align-items-center">
                                             <i class="fas fa-trophy"></i>
                                             <p>Semifinal</p>
@@ -96,7 +98,7 @@
                                             <p class="fw-bold fs-5">Real Madrid</p>
                                         </div>
                                     </div>
-                                    <div class="d-flex justify-content-between mt-2 p-2">
+                                    <div class="d-flex justify-content-between mt-2 p-2 gap-2">
                                         <div class="d-flex gap-3 align-items-center">
                                             <i class="fas fa-trophy"></i>
                                             <p>Semifinal</p>
