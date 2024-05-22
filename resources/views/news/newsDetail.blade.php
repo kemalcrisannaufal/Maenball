@@ -15,7 +15,7 @@
         </div>
 
         <div id="comments">
-            <h1 class="comment-title-main">Tambahkan Komentar</h1>
+            <h1 class="comment-title-main">Add Comment</h1>
             <div class="comment-input-box">
                 <form action="/news-comment/{{ $news->id }}" method="POST" style="width: 100%"
                     class="d-flex justify-content-center">
@@ -35,7 +35,7 @@
                 </form>
             </div>
 
-            <h1 class="comment-subtitle-main">Komentar</h1>
+            <h1 class="comment-subtitle-main">Comments</h1>
             @foreach ($news->comments as $comment)
                 <div class="comment">
                     <div class="profile-picture-comment">
@@ -51,8 +51,8 @@
                         <p class="comment-name">{{ $comment->users->name }}</p>
                         <p class="comment-content">{{ $comment->comment }}</p>
                         <div class="d-flex gap-3">
-                            <p class="comment-reply" data-comment-id="{{ $comment->id }}">Balas</p>
-                            <p class="see-replies" data-comment-id="{{ $comment->id }}">Lihat Balasan</p>
+                            <p class="comment-reply" data-comment-id="{{ $comment->id }}">Reply</p>
+                            <p class="see-replies" data-comment-id="{{ $comment->id }}">See Replies</p>
                         </div>
                     </div>
                 </div>

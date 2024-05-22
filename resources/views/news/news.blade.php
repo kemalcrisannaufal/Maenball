@@ -16,7 +16,7 @@
         <div class="container mt-5">
             <div class="row">
                 <div class="col-md-8" id="latest">
-                    <h1>Berita</h1>
+                    <p class="fw-bold fs-3 mb-3">News</p>
                     <a href="/news/{{ $latest_news->id }}">
                         <div class="latest-news-box">
                             <img src="{{ asset('storage/thumbnails/' . $latest_news->thumbnail) }}"
@@ -27,7 +27,7 @@
                 </div>
                 @if (count($side_news) > 0)
                 <div class="col-md-4">
-                    <h1 class="fs-2">Paling Baru</h1>
+                    <h1 class="fw-bold fs-3 mb-3">Latest News</h1>
                     <div class="vertical-news-box">
                         @foreach ($side_news as $value)
                             <a href="/news/{{ $value->id }}">
@@ -45,7 +45,7 @@
             <hr>
             @if (count($news) > 0)
             <div class="row">
-                <h1 class="fs-2">Berita Lainnya</h1>
+                <h1 class="fw-bold fs-3">More News</h1>
                 <div class="horizontal-news-box">
                     @foreach ($news as $value)
                         <a href="/news/{{ $value->id }}">

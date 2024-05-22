@@ -1,3 +1,7 @@
+p {
+    margin: 0;
+    padding: 0;
+}
 .item-box {
     display: flex;
     align-items: center;
@@ -57,6 +61,11 @@
     left: 140%;
     color: white;
     top: 60%;
+}
+
+#no-schedule {
+    border-radius: 10px;
+    background: linear-gradient(to left, rgba(0, 75, 117, 1), rgb(102, 115, 214));
 }
 
 @media (max-width: 1400px) {

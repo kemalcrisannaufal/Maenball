@@ -116,6 +116,11 @@ li {
 }
 
 @media (max-width: 768px) {
+
+    .navbar ul li a {
+        font-size: 13px;
+    }
+
     #logo {
         display: none;
     }

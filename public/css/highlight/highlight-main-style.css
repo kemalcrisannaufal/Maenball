@@ -17,6 +17,8 @@ iframe {
     height: 200px;
     margin-top: 1rem;
     border: solid 1px;
+    display: flex;
+    align-items: center;
     overflow: hidden;
     border-radius: 5px;
     position: relative;
@@ -26,8 +28,6 @@ iframe {
         rgba(52, 61, 135, 1)
     );
     box-shadow: 10px 10px 5px grey;
-    display: flex;
-    align-items: center;
 }
 
 .side-thumbnail {
@@ -184,6 +184,7 @@ a {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 20px;
+    align-items: center;
 }
 
 .img-highlight {

@@ -4,82 +4,67 @@
 
 @section('css', '/css/home/home-style.css')
 
-@section('content')
+@section('js', '/js/dashboard.js')
 
+@section('content')
     <div class="container mt-5">
         <div class="row">
             <div class="col-md-4 col-lg-4">
                 <div id="standings-web">
                     <p class="fw-bold fs-3 mb-3">Standings</p>
-                    @for ($i = 0; $i < 8; $i++)
+                    @foreach ($standings as $value)
+                    <div>
                         <div>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Group A</th>
+                                        <th>Group {{$value[0]['group_name']}}</th>
+                                        <th>Pts</th>
                                         <th>W</th>
                                         <th>D</th>
                                         <th>L</th>
                                         <th>Ga</th>
                                         <th>Gd</th>
-                                        <th>Pts</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @for ($i = 0; $i < 4; $i++)
                                     <tr>
-                                        <td>Copenhagen</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
+                                        <td>{{$value[$i]['name']}}</td>
+                                        <td>{{$value[$i]['points']}}</td>
+                                        <td>{{$value[$i]['won']}}</td>
+                                        <td>{{$value[$i]['drawn']}}</td>
+                                        <td>{{$value[$i]['lost']}}</td>
+                                        <td>{{$value[$i]['goals_scored']}}</td>
+                                        <td>{{$value[$i]['goals_conceded']}}</td>
                                     </tr>
-
-                                    <tr>
-                                        <td>Leicester City</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vilareal</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Bayern</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
-                                    </tr>
+                                    @endfor
                                 </tbody>
                             </table>
                         </div>
-                    @endfor
-                    <p class="fw-semibold fs-5">UEFA Champions League</p>
+                    </div>
+                    @endforeach
                 </div>
             </div>
+
             <div class="col-md-8 col-lg-8 col-sm-12" id="right-side">
-                <p class="fw-bold fs-2 mb-3">Berita Terkini</p>
-                <a href="/news/{{ $latest_news->first()->id }}">
-                    <div class="news-homepage">
-                        <img src="{{ '/storage/thumbnails/' . $latest_news->first()->thumbnail }}"
-                            alt="{{ $latest_news->first()->title }}" class="img-news">
+                <p class="fw-bold fs-3 mb-3">Latest News</p>
+                <div class="news-slider">
+                    <button class="button prev">&#10094;</button>
+                    <div class="news-wrapper">
+                        @foreach ($latest_news as $news)
+                            <div class="news-homepage">
+                                <a href="/news/{{ $news->id }}">
+                                    <img src="{{ '/storage/thumbnails/' . $news->thumbnail }}" alt="{{ $news->title }}"
+                                        class="img-news">
+                                </a>
+                                <h4 class="news-title-homepage">{{ $news->title }}</h4>
+                            </div>
+                        @endforeach
                     </div>
-                </a>
-                <h4 class="news-title-homepage">{{ $latest_news->first()->title }}</h4>
+                    <button class="button next">&#10095;</button>
+                </div>
+
                 <div class="schedule-section">
                     <div class="d-flex justify-content-between mb-3">
                         <p class="fw-bold fs-4">Next Match</p>
@@ -88,7 +73,7 @@
                     <div class="first-schedule-box">
                         <div class="d-flex justify-content-between align-items-center gap-5 w-100">
                             <div class="d-flex justify-content-center align-items-center gap-2">
-                                <img src="/images/madrid.png" alt=""  width="40">
+                                <img src="/images/madrid.png" alt="" width="40">
                                 <p>Real Madrid</p>
                             </div>
                             <div class="d-flex flex-column justify-content-center align-items-center gap-0">
@@ -112,7 +97,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     @for ($i = 0; $i < 4; $i++)
                         <div class="schedule-box">
@@ -162,67 +146,41 @@
                     </div>
                 </div>
                 <div id="standings-mobile">
-                    <p class="fw-bold fs-3 mb-3">Standings</p>
-                    @for ($i = 0; $i < 8; $i++)
+                    <p class="fw-bold fs-4 mb-3">Standings</p>
+                    @foreach ($standings as $value)
+                    <div>
                         <div>
                             <table class="table">
                                 <thead>
                                     <tr>
-                                        <th>Group A</th>
+                                        <th>Group {{$value[0]['group_name']}}</th>
+                                        <th>Pts</th>
                                         <th>W</th>
                                         <th>D</th>
                                         <th>L</th>
                                         <th>Ga</th>
                                         <th>Gd</th>
-                                        <th>Pts</th>
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    @for ($i = 0; $i < 4; $i++)
                                     <tr>
-                                        <td>Copenhagen</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
+                                        <td>{{$value[$i]['name']}}</td>
+                                        <td>{{$value[$i]['points']}}</td>
+                                        <td>{{$value[$i]['won']}}</td>
+                                        <td>{{$value[$i]['drawn']}}</td>
+                                        <td>{{$value[$i]['lost']}}</td>
+                                        <td>{{$value[$i]['goals_scored']}}</td>
+                                        <td>{{$value[$i]['goals_conceded']}}</td>
                                     </tr>
-
-                                    <tr>
-                                        <td>Leicester City</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
-                                    </tr>
-                                    <tr>
-                                        <td>Vilareal</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Bayern</td>
-                                        <td>10</td>
-                                        <td>6</td>
-                                        <td>2</td>
-                                        <td>21</td>
-                                        <td>16</td>
-                                        <td>33</td>
-                                    </tr>
+                                    @endfor
                                 </tbody>
                             </table>
                         </div>
-                    @endfor
+                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
     </div>
-
 @endsection

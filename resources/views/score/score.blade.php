@@ -47,7 +47,7 @@
                 </div>
 
                 <div class="container mt-3">
-                    <p class="fw-bold fs-3 mb-2 text-dark">Hasil Pertandingan Lain</p>
+                    <p class="fw-bold fs-3 mb-2 text-dark">Result of the other matches</p>
                     <div class="row">
                         <div class="col-md-6">
                             @for ($i = 0; $i < 2; $i++)

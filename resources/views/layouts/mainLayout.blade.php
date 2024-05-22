@@ -32,10 +32,10 @@
             <a href="/dashboard"><img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo"></a>
             <div class="nav">
                 <ul class="d-flex gap-5 align-items-center" id="nav">
-                    <li><a href="/dashboard">Beranda</a></li>
-                    <li><a href="/news">Berita</a></li>
-                    <li><a href="/score">Skor</a></li>
-                    <li><a href="/schedule">Jadwal</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/score">Score</a></li>
+                    <li><a href="/schedule">Schedule</a></li>
                     <li><a href="/highlight">Highlight</a></li>
                     <li class="dropdown" id="profile">
                         <div class="profile">
