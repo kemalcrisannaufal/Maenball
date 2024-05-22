@@ -16,8 +16,9 @@ Route::get('/', function () {
     // return view('auth.login');
 });
 
-Route::get('/dashboard', [HomeController::class, 'index'])->middleware('auth:web');
 Route::get('/test', [APIController::class, 'getData']);
+
+Route::get('/dashboard', [HomeController::class, 'index'])->middleware('auth:web');
 
 Route::get('/register', [AuthController::class, 'register'])->middleware('guest');
 Route::post('/register', [AuthController::class, 'registerProcess'])->middleware('guest');

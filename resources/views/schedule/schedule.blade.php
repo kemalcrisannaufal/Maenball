@@ -17,7 +17,7 @@
                         <img src="images/schedule.png" alt="" class="img">
                         <div class="newest-schedule-match">
                             <p class="fw-bold fs-2 text-white mb-3" id="title">Upcoming Match</p>
-                            <div class="d-flex justify-content-start align-items-center gap-5">
+                            <div class="d-flex justify-content-start align-items-center gap-3">
                                 {{-- <img src="images/barca.png" alt="" class="img-club"> --}}
                                 <p class="fw-bold fs-4">{{ $main_schedule['home_name'] }}</p>
                                 <p class="fw-bold fs-2 text-white">VS</p>
