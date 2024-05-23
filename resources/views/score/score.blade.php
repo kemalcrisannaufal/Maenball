@@ -25,7 +25,7 @@
                     </div>
                 </div>
                 <div class="date-main-info">
-                    <p>UEFA Champions League</p>
+                    <p class="fw-bold">UEFA Champions League</p>
                     @php
                         $utcTime = $latest_match[0]['date'] . ' ' . $latest_match[0]['scheduled'];
                         $localTime = Carbon\Carbon::parse($utcTime)
@@ -33,16 +33,16 @@
                             ->format('Y-m-d H:i');
                         $time = explode(' ', $localTime);
                     @endphp
-                    <p>{{ $localTime }}</p>
+                    <p class="fw-bold">{{ $localTime }}</p>
                 </div>
                 <div class="additional-main-info">
                     <div class="d-flex gap-3 align-items-center">
                         <i class="far fa-clock"></i>
-                        <p>{{ $time[1] . ' WIB' }}</p>
+                        <p class="fw-bold">{{ $time[1] . ' WIB' }}</p>
                     </div>
                     <div class="d-flex gap-3 align-items-center">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>{{ $latest_match[0]['location'] }}</p>
+                        <p class="fw-bold">{{ $latest_match[0]['location'] }}</p>
                     </div>
                 </div>
             </div>
@@ -55,13 +55,13 @@
                             <div class="score-main-box">
                                 <div class="score-box">
                                     <div class="d-flex flex-column justify-content-center align-items-center">
-                                        <p class="fw-bold fs-5">{{ $match['home_name'] }}</p>
+                                        <p class="fw-bold fs-5 text-white">{{ $match['home_name'] }}</p>
                                     </div>
                                     <div>
-                                        <p class="fw-bold fs-2">{{ $match['score'] }}</p>
+                                        <p class="fw-bold fs-2 text-white">{{ $match['score'] }}</p>
                                     </div>
                                     <div class="d-flex flex-column justify-content-center align-items-center">
-                                        <p class="fw-bold fs-5">{{ $match['away_name'] }}</p>
+                                        <p class="fw-bold fs-5 text-white">{{ $match['away_name'] }}</p>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between mt-2 p-2 gap-2">

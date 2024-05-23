@@ -3,6 +3,14 @@ p {
     padding: 0;
 }
 
+body {
+    background-image: url("/images/iamge.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: repeat;
+    min-height: 100vh;
+}
+
 .news-title-main {
     font-weight: bold;
     font-size: 3rem;

@@ -49,13 +49,21 @@ body {
     border-radius: 5px;
     margin-bottom: 1.25rem;
     background-color: white;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 5px 5px 5px rgb(220, 220, 220);
+    background-image: url('/images/score-main-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .score-box {
     display: flex;
     justify-content: center;
     gap: 1rem;
+    background-image: url('/images/score-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 
