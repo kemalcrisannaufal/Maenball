@@ -26,7 +26,7 @@
     </script>
 </head>
 
-<body>
+<body class="admin-bg">
     <div class="page-container">
         <div class="container-fluid navbar">
             <a href="/admin/dashboard"><img src="{{ asset('/images/ligachamp.png') }}" alt="" id="logo"></a>
