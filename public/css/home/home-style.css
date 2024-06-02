@@ -64,6 +64,20 @@
     width: 100%;
 }
 
+.th-standings {
+    background-color: rgb(2, 60, 94);
+    color: white;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 80%;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
 a:hover {
     opacity: 0.8;
     transition: 0.2s;

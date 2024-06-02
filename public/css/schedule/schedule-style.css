@@ -68,6 +68,8 @@ p {
     background: linear-gradient(to left, rgba(0, 75, 117, 1), rgb(102, 115, 214));
 }
 
+
+
 @media (max-width: 1400px) {
     .img-box {
         display: flex;

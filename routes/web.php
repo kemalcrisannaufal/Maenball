@@ -66,4 +66,10 @@ Route::prefix('admin')->group(function () {
     Route::post('/highlight', [VideoController::class, 'store'])->middleware('auth:admin');
 });
 
+Route::prefix('api')->group(function () {
+    Route::get('/news', [APIController::class, 'news']);
+    Route::get('/news/{id}', [APIController::class, 'news_detail']);
+    Route::post('/login', [APIController::class, 'loginProcess']);
+    Route::get('/highlights', [APIController::class, 'getAllHighlights']);
+});
 

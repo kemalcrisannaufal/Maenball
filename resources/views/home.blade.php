@@ -18,13 +18,20 @@
                                 <table class="table">
                                     <thead>
                                         <tr>
-                                            <th>Group {{ $value[0]['group_name'] }}</th>
-                                            <th>Pts</th>
-                                            <th>W</th>
-                                            <th>D</th>
-                                            <th>L</th>
-                                            <th>Ga</th>
-                                            <th>Gd</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">Group {{ $value[0]['group_name'] }}</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">Pts</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">W</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">D</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">L</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">Ga</th>
+                                            <th style="background-color: rgb(2, 60, 94);
+                                            color: white;">Gd</th>
                                         </tr>
                                     </thead>
                                     <tbody>
@@ -44,6 +51,10 @@
                             </div>
                         </div>
                     @endforeach
+                </div>
+
+                <div class="mt-5">
+                    <img src="images/maenbal.png" alt="">
                 </div>
             </div>
 
@@ -116,7 +127,7 @@
                 @endif
 
                 @if (count($score) > 0)
-                    <div class="d-flex justify-content-between mb-3">
+                    <div class="d-flex justify-content-between mb-3 mt-3">
                         <p class="fw-bold fs-4">Last Matches</p>
                         <a href="/score" class="fw-bold fs-4 text-decoration-none text-dark">View All</a>
                     </div>
@@ -217,5 +228,6 @@
                 </div>
             </div>
         </div>
+        <hr>
     </div>
 @endsection
